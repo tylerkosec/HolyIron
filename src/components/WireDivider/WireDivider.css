@@ -1,0 +1,15 @@
+.wire-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.wire-divider-svg {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 1px 4px rgba(154, 117, 53, 0.15));
+}

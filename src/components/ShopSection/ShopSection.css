@@ -1,0 +1,126 @@
+.shop-section {
+  padding: 8rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.shop-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.shop-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.shop-formerly {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.25rem;
+  margin-top: -0.25rem;
+}
+
+.shop-tagline {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--gold);
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.shop-description {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  max-width: 420px;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.75rem;
+}
+
+.shop-photo {
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.shop-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.shop-photo:hover img {
+  transform: scale(1.03);
+}
+
+.shop-photo--1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  aspect-ratio: 3/4;
+}
+
+.shop-photo--2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  aspect-ratio: 1/1;
+}
+
+.shop-photo--3 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  aspect-ratio: 1/1;
+}
+
+.shop-photo--4 {
+  grid-column: 1 / 3;
+  aspect-ratio: 16/7;
+}
+
+.shop-photo--5 {
+  grid-column: 1 / 3;
+  aspect-ratio: 16/7;
+}
+
+.shop-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 1024px) {
+  .shop-inner {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+
+  .shop-description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-section {
+    padding: 5rem 1.5rem;
+  }
+
+  .shop-photo--1 {
+    aspect-ratio: 3/4;
+  }
+}

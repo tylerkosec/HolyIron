@@ -1,0 +1,143 @@
+.artist-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.artist-card:hover {
+  border-color: var(--gold);
+}
+
+/* Photo header */
+.artist-card-image {
+  position: relative;
+  aspect-ratio: 3/2;
+  overflow: hidden;
+  background: var(--surface-2);
+  flex-shrink: 0;
+}
+
+.artist-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.6s ease;
+}
+
+.artist-card:hover .artist-card-image img {
+  transform: scale(1.04);
+}
+
+.artist-card-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, var(--surface-2) 60%, var(--gold-dim) 100%);
+}
+
+.artist-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 30%,
+    rgba(10, 10, 10, 0.85) 100%
+  );
+}
+
+.artist-card-header-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem 1.25rem;
+}
+
+.artist-card-name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text);
+  margin-bottom: 0.2rem;
+}
+
+.artist-card-role {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* IG Feed section */
+.artist-card-feed {
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.artist-card-ig-handle {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.artist-card-ig-handle:hover {
+  color: var(--gold);
+}
+
+/* Override InstagramFeed styles inside card */
+.artist-card-feed .ig-feed {
+  gap: 0.5rem;
+}
+
+.artist-card-feed .ig-handle {
+  display: none;
+}
+
+.artist-card-feed .ig-grid {
+  gap: 2px;
+}
+
+.artist-card-feed .ig-view-more {
+  display: none;
+}
+
+/* CTA row */
+.artist-card-cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.25rem;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.2s, background 0.2s;
+}
+
+.artist-card-cta-row:hover {
+  color: var(--gold-light);
+  background: var(--surface-2);
+}
+
+.artist-card-arrow {
+  transition: transform 0.2s;
+}
+
+.artist-card-cta-row:hover .artist-card-arrow {
+  transform: translateX(4px);
+}

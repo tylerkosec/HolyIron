@@ -1,0 +1,24 @@
+.artists-section {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.artists-header {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 5rem 2rem 3rem;
+  text-align: center;
+}
+
+.artists-stack {
+  max-width: 1400px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .artists-header {
+    padding: 4rem 1.5rem 2.5rem;
+  }
+}

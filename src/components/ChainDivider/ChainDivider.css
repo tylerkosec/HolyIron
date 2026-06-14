@@ -1,0 +1,14 @@
+.chain-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.chain-divider-svg {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}

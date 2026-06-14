@@ -1,0 +1,217 @@
+.artist-page {
+  padding-top: 0;
+}
+
+/* Hero */
+.artist-hero {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.artist-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.artist-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.2) 0%,
+    rgba(10, 10, 10, 0.85) 100%
+  );
+}
+
+.artist-hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.artist-back {
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.2s;
+  margin-bottom: 0.5rem;
+}
+
+.artist-back:hover {
+  color: var(--gold);
+}
+
+.artist-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  color: var(--text);
+  line-height: 1;
+}
+
+.artist-ig-link {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  transition: color 0.2s;
+}
+
+.artist-ig-link:hover {
+  color: var(--gold-light);
+}
+
+/* Bio */
+.artist-bio-section {
+  padding: 4rem 4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.artist-bio-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  max-width: 640px;
+}
+
+.artist-bio {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.9;
+}
+
+/* Portfolio gallery */
+.artist-portfolio-section {
+  padding: 6rem 4rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.artist-portfolio-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.artist-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+}
+
+.artist-portfolio-tile {
+  aspect-ratio: 1;
+  overflow: hidden;
+  display: block;
+  background: var(--surface);
+}
+
+.artist-portfolio-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+  opacity: 0.9;
+}
+
+.artist-portfolio-tile:hover img {
+  transform: scale(1.04);
+  opacity: 1;
+}
+
+/* Instagram */
+.artist-ig-section {
+  padding: 6rem 4rem;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.artist-ig-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Book CTA */
+.artist-book-section {
+  padding: 8rem 4rem;
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.artist-book-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artist-book-description {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+}
+
+.artist-book-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.artist-not-found {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-family: var(--font-heading);
+  color: var(--text-muted);
+}
+
+@media (max-width: 1024px) {
+  .artist-contact-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .artist-hero-content {
+    padding: 3rem 2rem;
+  }
+
+  .artist-bio-section,
+  .artist-ig-section,
+  .artist-portfolio-section,
+  .artist-contact-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .artist-portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

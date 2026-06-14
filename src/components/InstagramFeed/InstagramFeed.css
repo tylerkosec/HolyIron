@@ -1,0 +1,101 @@
+.ig-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ig-handle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  transition: color 0.2s;
+}
+
+.ig-handle:hover {
+  color: var(--gold-light);
+}
+
+.ig-icon {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+}
+
+.ig-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+
+.ig-tile {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  display: block;
+  background: var(--surface-2);
+}
+
+.ig-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, opacity 0.3s;
+}
+
+.ig-tile:hover img {
+  transform: scale(1.05);
+  opacity: 0.85;
+}
+
+.ig-tile-video-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 0.65rem;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 0.2rem 0.4rem;
+  border-radius: 2px;
+}
+
+.ig-tile--loading {
+  background: var(--surface-2);
+  animation: igPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes igPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.ig-tile--placeholder .ig-tile-inner {
+  width: 100%;
+  height: 100%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.ig-tile--placeholder:hover .ig-tile-inner {
+  background: var(--gold-dim);
+}
+
+.ig-view-more {
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.ig-view-more:hover {
+  color: var(--gold);
+}

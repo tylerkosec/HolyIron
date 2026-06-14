@@ -1,0 +1,23 @@
+.home-ig-section {
+  padding: 8rem 2rem;
+}
+
+.home-ig-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-ig-inner .ig-feed {
+  text-align: left;
+}
+
+.home-ig-inner .ig-handle {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .home-ig-section {
+    padding: 5rem 1.5rem;
+  }
+}
