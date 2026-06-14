@@ -16,8 +16,39 @@
   margin-bottom: 0.5rem;
 }
 
+.home-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px;
+  margin-top: 2rem;
+}
+
+.home-gallery-tile {
+  aspect-ratio: 1;
+  overflow: hidden;
+  display: block;
+  background: var(--surface-2);
+}
+
+.home-gallery-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+
+.home-gallery-tile:hover img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
 @media (max-width: 768px) {
   .home-ig-section {
     padding: 5rem 1.5rem;
+  }
+
+  .home-gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
