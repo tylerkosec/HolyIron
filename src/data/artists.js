@@ -6,7 +6,7 @@ export const artists = [
     instagram: 'holyironkira',
     email: '',
     bio: 'Kira Knowlton is a tenured neotraditional and illustrative artist, specializing in pulling creative concepts and visions through the ether, and implementing them onto the skin. Kira\'s best work is done when given creative freedom.',
-    styles: ['Tattoo Style'],
+    styles: ['Neotraditional', 'Illustrative'],
     photo: '/assets/images/artistportraits/kira-knowlton-1.jpg',
     portfolio: [
       '/assets/images/portfolio/kira/E823B05A-BF13-44CA-AE22-C1630985FEBD.jpeg',
@@ -31,7 +31,7 @@ export const artists = [
     instagram: 'tanis_martin',
     email: '',
     bio: 'Tanis Martin, born in Gunnison CO, raised in Glenwood Springs. As an artist with an affinity for the darker side of art and media, he has been working at Holy Iron Tattoo since 2018. His work centers on the American Traditional and Neo Traditional style of tattoos, with special interests in blackwork horror, nerd culture, and lady faces.',
-    styles: ['Tattoo Style'],
+    styles: ['Traditional', 'Neo Traditional'],
     photo: '/assets/images/artistportraits/tanis-martin-2.jpg',
     portfolio: [
       '/assets/images/portfolio/tanis/IMG_1100.jpeg',
@@ -55,7 +55,7 @@ export const artists = [
     instagram: 'dovahtattoos',
     email: '',
     bio: 'A long time resident of the Roaring Fork Valley, Kayla has always had an interest in art. She left her banking career in 2023 to pursue tattooing and hasn\'t looked back since. Kayla loves tattooing all things cute, bright, and colorful and is always down to do pop culture references.',
-    styles: ['Tattoo Style'],
+    styles: ['Neotraditional', 'Illustrative'],
     photo: '/assets/images/artistportraits/kayla-warren-3.jpg',
     portfolio: [
       '/assets/images/portfolio/dovah/IMG_3852.jpeg',
@@ -78,7 +78,7 @@ export const artists = [
     instagram: 'jimbeartattoos',
     email: '',
     bio: 'Jimmy is a four year tattooer with a passion for American traditional, Japanese traditional and lettering style tattoos. He brings an illustrative lens to his work inspired by skate and graffiti culture.',
-    styles: ['Tattoo Style'],
+    styles: ['American Traditional', 'Japanese Traditional', 'Lettering'],
     photo: '/assets/images/artistportraits/jim-bear-4.jpg',
     portfolio: [
       '/assets/images/portfolio/jimbear/IMG_2213.jpeg',
@@ -96,7 +96,7 @@ export const artists = [
     instagram: 'ivylaex',
     email: '',
     bio: 'Ivy is a Colorado based tattoo artist specializing in black and grey, geometric, dotwork, ornamental, and fine line tattooing. Her work emphasizes flow, balance, and body composition, often incorporating freehand drawing to create pieces that move naturally with the body. Outside of tattooing, she is a mother of three who draws inspiration from nature, architecture, and the subtle beauty of everyday life.',
-    styles: ['Tattoo Style'],
+    styles: ['Black & Grey', 'Geometric', 'Dotwork', 'Ornamental', 'Fine Line'],
     photo: '/assets/images/artistportraits/ivy-alex-5.jpg',
     portfolio: [
       '/assets/images/portfolio/ivy/image0.jpeg',
@@ -121,7 +121,7 @@ export const artists = [
     instagram: 'stoopkidtattoo',
     email: '',
     bio: 'Bio coming soon.',
-    styles: ['Tattoo Style'],
+    styles: [],
     photo: '/assets/images/artistportraits/christian-terzich-6.jpg',
     igTokenKey: 'VITE_IG_TOKEN_STOOPKID',
     booking: { type: 'dm', label: 'Contact Me' },
