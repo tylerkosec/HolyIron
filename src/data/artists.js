@@ -133,7 +133,7 @@ export const artists = [
     instagram: 'untotheblade',
     email: '',
     bio: 'Bio coming soon.',
-    styles: ['Tattoo Style'],
+    styles: [],
     photo: '/assets/images/artistportraits/mateo-gil-de-rubio-7.jpg',
     photoPosition: 'center 65%',
     igTokenKey: 'VITE_IG_TOKEN_UNTOTHEBLADE',
