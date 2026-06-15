@@ -91,7 +91,7 @@ export const artists = [
   },
   {
     id: 'ivy',
-    name: 'Ivy Laex',
+    name: 'Ivy DeMent',
     role: 'Tattoo Artist',
     instagram: 'ivylaex',
     email: '',
