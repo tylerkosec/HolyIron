@@ -83,7 +83,7 @@ export default function ArtistRow({ artist, index }) {
               @{artist.instagram}
             </a>
             <div className="artist-row-portfolio-grid">
-              {artist.portfolio.slice(0, 6).map((src, i) => (
+              {artist.portfolio.slice(0, 9).map((src, i) => (
                 <a
                   key={i}
                   href={src}
