@@ -22,7 +22,7 @@ export const artists = [
       '/assets/images/portfolio/kira/IMG_8732.jpeg',
     ],
     igTokenKey: 'VITE_IG_TOKEN_KIRA',
-    booking: { type: 'dm', label: 'Contact Me' },
+    booking: { type: 'form', label: 'Contact Me', url: 'https://l.instagram.com/?u=https%3A%2F%2Fforms.gle%2FZ9ka1Y26rL6T5tBp7%3Futm_source%3Dig%26utm_medium%3Dsocial%26utm_content%3Dlink_in_bio%26fbclid%3DPAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnQ3w2VCF-WOu62qPNrOI1becqnGou5BfG6dvHOIjgrK44Cwkga9_E4MrwVAs_aem_zTgPXTQuge47z1kZBjDbzQ&e=AUDPO9Wvhu40749U264f0NUdIQ1bLRtE3AukoXb4uz2nQXof0-BBopEDHVzyKFetkUerMFHIiZVQhvBtPIrT4ROQUme-tpdo638fPl5QJ3_H7tUztDfVqfMw2ye9wKwI4wzutPWXxXl8zGated5cUQU' },
   },
   {
     id: 'tanis',
@@ -112,7 +112,7 @@ export const artists = [
       '/assets/images/portfolio/ivy/image13.jpeg',
     ],
     igTokenKey: 'VITE_IG_TOKEN_IVY',
-    booking: { type: 'dm', label: 'Contact Me' },
+    booking: { type: 'form', label: 'Contact Me', url: 'https://venue.ink/@ivylaex?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnSU0vHiE4K2lpKNng96iX2x127jezrq9YnMNItzoMNDjKzyMfKJzFaCbGtM8_aem_8jZR9N3BtEtpYLEO8u7vmw' },
   },
   {
     id: 'stoopkid',
