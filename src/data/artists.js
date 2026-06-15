@@ -73,7 +73,7 @@ export const artists = [
   },
   {
     id: 'jimbear',
-    name: 'Jim Bear',
+    name: 'Jimmy Sandoval',
     role: 'Tattoo Artist',
     instagram: 'jimbeartattoos',
     email: '',
@@ -91,7 +91,7 @@ export const artists = [
   },
   {
     id: 'ivy',
-    name: 'Ivy Alex',
+    name: 'Ivy Laex',
     role: 'Tattoo Artist',
     instagram: 'ivylaex',
     email: '',

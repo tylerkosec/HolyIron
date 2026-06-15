@@ -33,10 +33,9 @@ export default function ShopSection() {
           <p className="shop-formerly">Formerly White Lodge Tattoo and Gallery</p>
           <div className="divider divider-left" />
           <p className="shop-description">
-            Opened in May of 2016 by fellow artist Aften Willcuts. Over the last
-            10 years the shop has grown into an amazing space attracting other
-            like-minded artists. We strive for a safe and clean place for clients
-            and artists to communicate and be.
+            Over the last 10 years the shop has grown into an amazing space
+            attracting other like-minded artists. We strive for a safe and clean
+            place for clients and artists to communicate and be.
           </p>
           <p className="shop-tagline">Good vibes only.</p>
           <a
