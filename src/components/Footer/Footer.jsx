@@ -2,8 +2,21 @@ import { Link } from 'react-router-dom'
 import { shop, artists } from '../../data/artists'
 import './Footer.css'
 
-const MAPS_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  shop.address || 'Holy Iron Tattoo Fort Collins Colorado'
+// Plain-HTML question pages in public/ (built by seo/build.mjs).
+const GUIDES = [
+  ['/tattoo-shop-glenwood-springs/', 'Tattoo shop in Glenwood Springs'],
+  ['/piercing-glenwood-springs/', 'Piercing'],
+  ['/cover-up-tattoos/', 'Cover-ups'],
+  ['/walk-in-tattoos-flash-days/', 'Walk-ins and flash days'],
+  ['/custom-tattoos/', 'Custom tattoos'],
+  ['/tattoo-shop-near-aspen/', 'Near Aspen and Carbondale'],
+  ['/tattoo-shop-near-vail-eagle/', 'Near Vail and Eagle'],
+  ['/tattoo-grand-junction/', 'From Grand Junction'],
+  ['/faq/', 'Questions'],
+]
+
+const MAPS_URL =`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  shop.address || 'Holy Iron Tattoo Glenwood Springs Colorado'
 )}`
 
 export default function Footer() {
@@ -28,7 +41,7 @@ export default function Footer() {
           <a href="#top" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }) }} className="footer-logo-link">
             <img
               src="/assets/logo/holy-iron-logo.png"
-              alt="Holy Iron Tattoo — back to top"
+              alt="Holy Iron Tattoo, back to top"
               className="footer-logo"
               onError={e => { e.target.style.display = 'none' }}
             />
@@ -71,8 +84,13 @@ export default function Footer() {
 
       </div>
 
+      <nav className="footer-guides" aria-label="Shop info">
+        {GUIDES.map(([href, label]) => <a key={href} href={href}>{label}</a>)}
+      </nav>
+
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Holy Iron Tattoo. All rights reserved.</p>
+        <p>©{new Date().getFullYear()} Holy Iron Tattoo. All rights reserved.</p>
+        <p className="footer-credit">Website by <a href="https://tylerkosec.com" target="_blank" rel="noopener noreferrer">Kosec Media</a></p>
       </div>
     </footer>
   )

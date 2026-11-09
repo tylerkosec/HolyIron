@@ -5,6 +5,7 @@ import ArtistsGrid from '../components/ArtistsGrid/ArtistsGrid'
 import ShopSection from '../components/ShopSection/ShopSection'
 import Divider from '../components/Divider/Divider'
 import { artists } from '../data/artists'
+import usePageMeta from '../hooks/usePageMeta'
 import './Home.css'
 
 const allPhotos = [
@@ -52,6 +53,11 @@ const allPhotos = [
 ]
 
 export default function Home() {
+  usePageMeta({
+    title: 'Holy Iron Tattoo | Tattoo and Piercing, Glenwood Springs CO',
+    description: 'Tattoo and piercing shop on Grand Ave in Glenwood Springs, CO. Custom work, cover-ups, flash days and walk-ins, open daily 11 to 7. Formerly White Lodge Tattoo.',
+    path: '/',
+  })
   const galleryRef = useRef(null)
   const galleryInView = useInView(galleryRef, { once: true, margin: '-80px' })
 

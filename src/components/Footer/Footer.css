@@ -178,6 +178,16 @@
   opacity: 0.35;
 }
 
+.footer-credit a {
+  color: var(--gold);
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.footer-credit a:hover {
+  opacity: 0.7;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .footer-inner {
@@ -231,4 +241,28 @@
   .footer-map-btn {
     align-self: center;
   }
+}
+
+/* Links to the question pages */
+.footer-guides {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.5rem;
+}
+
+.footer-guides a {
+  font-family: var(--font-heading);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.footer-guides a:hover {
+  color: var(--gold-light);
 }

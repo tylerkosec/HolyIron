@@ -32,14 +32,16 @@ export default function Hero() {
       <div className="hero-overlay" />
 
       <div className="hero-content">
-        <motion.img
-          src="/assets/logo/holy-iron-logo.png"
-          alt="Holy Iron Tattoo"
-          className="hero-logo"
-          initial={{ opacity: 0, scale: 0.96 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.4, ease: 'easeOut' }}
-        />
+        <h1 className="hero-h1">
+          <motion.img
+            src="/assets/logo/holy-iron-logo.png"
+            alt="Holy Iron Tattoo, Glenwood Springs"
+            className="hero-logo"
+            initial={{ opacity: 0, scale: 0.96 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.4, ease: 'easeOut' }}
+          />
+        </h1>
         <motion.p
           className="hero-location"
           initial={{ opacity: 0, y: 10 }}

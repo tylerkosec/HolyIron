@@ -2,11 +2,36 @@ import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { artists } from '../data/artists'
 import InstagramFeed from '../components/InstagramFeed/InstagramFeed'
+import usePageMeta from '../hooks/usePageMeta'
 import './ArtistPage.css'
+
+// Google description: who they are, what they do, where, in about 150 to 160 characters.
+function artistDescription(a) {
+  const piercer = a.role.includes('Piercer')
+  const who = a.role.toLowerCase().startsWith('owner') ? 'the owner and a tattoo artist' : piercer ? 'the piercer' : 'a tattoo artist'
+  const lead = `${a.name} is ${who} at Holy Iron Tattoo in Glenwood Springs, CO`
+  const end = piercer ? ', using titanium and 14k gold jewelry. See the work and book.' : '. See the work and book.'
+  const word = s => s.replace(/&/g, 'and').toLowerCase().replace(/\b(american|japanese)\b/g, m => m[0].toUpperCase() + m.slice(1))
+  let styles = (a.styles || []).map(word)
+  const list = l => l.length > 1 ? l.slice(0, -1).join(', ') + ' and ' + l.at(-1) : l[0]
+  const build = l => l.length ? `${lead}, doing ${list(l)} work${end}` : `${lead}${end}`
+  while (styles.length > 1 && build(styles).length > 160) styles = styles.slice(0, -1)
+  return build(styles)
+}
 
 export default function ArtistPage() {
   const { slug } = useParams()
   const artist = artists.find(a => a.id === slug)
+
+  const job = artist?.role?.includes('Piercer') ? 'Piercer' : 'Tattoo Artist'
+  usePageMeta({
+    title: artist
+      ? `${artist.name}, ${job} in Glenwood Springs | Holy Iron`
+      : 'Artist not found | Holy Iron Tattoo',
+    description: artist ? artistDescription(artist) : 'Holy Iron Tattoo, Glenwood Springs, Colorado.',
+    path: `/artists/${slug}`,
+    breadcrumb: artist ? artist.name : null,
+  })
 
   if (!artist) {
     return (
@@ -101,8 +126,8 @@ export default function ArtistPage() {
           <h2 className="section-title">Work with {artist.name}</h2>
           <div className="divider" />
           <p className="artist-book-description">
-            Slide into the DMs on Instagram or send an email — {artist.name} will
-            get back to you to talk through your idea and get you scheduled.
+            Message {artist.name} on Instagram{artist.email ? ' or by email' : ''} to
+            talk through your idea and get on the schedule.
           </p>
           <div className="artist-book-actions">
             <a
